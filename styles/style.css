@@ -1,37 +1,26 @@
 .page {
-  width: 1440px;
+  max-width: 1440px;
   margin: auto;
   font-family: Raleway, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
 }
 
 /* Шапка */
 
 .header {
   display: flex;
+  justify-content: space-between;
+  padding: 92px 50px 96px;
   color: #000;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  padding: 92px 49px 96px 51px;
 }
 
 .header__menu {
   display: flex;
   align-items: center;
+  width: 33.3%;
 }
 
 .header__links-list {
@@ -41,18 +30,24 @@ li {
 }
 
 .header__links-list-item {
-  list-style: circle;
   margin-left: 25px;
+  list-style: circle;
 }
+
+.header__menu ul li:nth-child(2) {
+  margin-right: 10px;
+}
+
 
 .header__links-list-item-no-bullit {
   list-style: none;
+  margin-right: 10px;
 }
 
 .header__link {
-  text-decoration: none;
   border-bottom: 1px solid black;
   line-height: 24.3px;
+  text-decoration: none;
 }
 
 .header__link-active {
@@ -61,61 +56,63 @@ li {
 
 .header__logo {
   display: flex;
-  margin-left: 209px;
-  margin-right: 355px;
+  justify-content: center;
+  width: 33.3%;
 }
 
 .header__logo-image {
-justify-content: center;
-width: 148px;
-height: 104px;
-}
-
-.address {
-  font-style: normal;
-  color: #000;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  align-self: center;
+  justify-content: center;
+  width: 148px;
+  height: 104px;
 }
 
 .header__address {
-width: 240px;
-height: 49px;
-line-height: 24.3px;
-flex-wrap: wrap;
+  width: 33.3%;
+  margin: auto 0;
+}
+
+.address {
+  display: block;
+  max-width: 240px;
+  height: 100%;
+  margin-right: 0;
+  margin-left: auto;
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
 }
 
 /* Заголовок */
 
 .cover {
   position: relative;
-  background-image: url(../images/cover.jpg);
-  background-size: cover;
-  background-position: center;
   z-index: 1;
+  max-width: 1440px;
+  background-image: url(../images/cover.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .overlay {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(0 0 0 / 0.6);
   z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 0.6);
 }
 
 .cover__title {
   position: relative;
+  z-index: 3;
   padding: 165px 50px 137px 50px;
   color: #FFF;
+  font-weight: 700;
   font-size: 100px;
   font-style: normal;
-  font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 30px;
-  z-index: 3;
+  text-transform: uppercase;
 }
 
 .aligned-text {
@@ -126,14 +123,14 @@ flex-wrap: wrap;
 .aligned-text_center {
   display: block;
   margin: 20px 0;
-  text-align: center;
   line-height: 100%;
+  text-align: center;
 }
 
 .aligned-text_right {
   display: block;
-  text-align: right;
   line-height: 100%;
+  text-align: right;
 }
 
 .letter-spacing-extended {
@@ -145,170 +142,167 @@ flex-wrap: wrap;
 }
 
 .cover__description {
-  display: grid;
-  padding: 0 50px 50px;
-  grid-template-columns: 1fr 2.5fr 1fr;
   position: relative;
-  text-align: center;
   z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
   column-gap: 78px;
+  padding: 0 50px 50px;
+  text-align: center;
 }
 
 .cover__description-text {
   display: grid;
   grid-column: 2;
   align-items: center;
-  color: rgb(255 255 255 / 0.6);
-  word-spacing: 17px;
-  text-align: right;
+  color: rgb(255 255 255);
+  font-weight: 400;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
   line-height: 28px;
+  text-align: right;
   text-transform: uppercase;
+  word-spacing: 17px;
 }
 
 .bet-button {
   display: grid;
   grid-column: 3;
-  align-items: center;
   justify-self: right;
+  align-items: center;
   width: 257px;
   height: 52px;
-  background: transparent;
-  color: rgb(255 255 255 / 0.6);
-  text-align: center;
+  border: 1px solid rgb(255 255 255);
+  color: rgb(255 255 255);
+  font-weight: 400;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+  text-align: center;
   text-transform: uppercase;
-  border: 1px solid rgb(255 255 255 / 0.6);
+  background: transparent;
+  cursor: pointer;
 }
 
-div.bet-button a {
-  text-decoration: none;
-}
-
-/*Лоты*/
+/* Лоты */
 
 .lots {
-  width: 1340px;
-  height: 579px;
+  max-width: 1340px;
   margin: 180px auto 181px;
 }
 
 .lots__heading {
-  display: inline;
   margin-left: 40px;
   color: #000;
+  font-weight: 700;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
 }
 
 .lots__card-list {
   position: relative;
-  margin-top: 27px;
   display: grid;
-  grid-gap: 25px;
-  justify-content: space-between;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
+  justify-content: space-between;
+  margin-top: 27px;
+  grid-gap: 25px;
 }
 
 .card_type_film {
   position: relative;
   display: grid;
+  max-width: 430px;
+  min-height: 450px;
   background-image: url(../images/card-lot-01.jpg);
   background-size: cover;
-  width: 430px;
-  height: 450px;
 }
 
 .card_type_book {
   position: relative;
   display: grid;
+  max-width: 430px;
+  min-height: 450px;
   background-image: url(../images/card-lot-02.jpg);
   background-size: cover;
-  width: 430px;
-  height: 450px;
 }
 
 .card_type_picture {
   position: relative;
   display: grid;
+  max-width: 430px;
+  min-height: 450px; 
   background-image: url(../images/card-lot-03.jpg);
   background-size: cover;
-  width: 430px;
-  height: 450px;
 }
 
 .card__title {
   position: relative;
+  z-index: 3;
   padding: 50px 40px 0 40px;
-  color: rgb(255 255 255 / 0.9);
+  color: rgb(255 255 255);
+  font-weight: 700;
   font-size: 22px;
   font-style: normal;
-  font-weight: 700;
   line-height: 120%;
   text-decoration-line: underline;
   text-transform: uppercase;
-  z-index: 3;
 }
 
 .card__text {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: flex-end;
-  position: relative;
-  bottom: 50px;
+  margin-bottom: 50px;
   padding: 0 40px;
-  color: rgb(255 255 255 / 0.6);
+  color: rgb(255 255 255);
+  font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
   line-height: 120%;
-  z-index: 3;
 }
 
 .lots__look-more-link {
+  display: inline-block;
   margin: 30px 0 0 40px;
   color: #000;
+  font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+  text-decoration: none;
+  border-bottom: 1px solid black;
 }
 
 /* Об аукционе */
 
 .about {
+  max-width: 1340px;
   margin: auto;
-  width: 1340px;
-  height: 487px;
 }
 
 .about__column {
-  display: grid;
   position: relative;
-  justify-content: space-between;
+  display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(2, 1fr);
-  column-gap: 10px;
+  justify-content: space-between;
   row-gap: 4px;
+  column-gap: 10px;
 }
 
 .about__logo {
   display: grid;
   justify-content: center;
   align-items: center;
-  margin: 0 90px;
-  background-color: #000;
   width: 240px;
   height: 240px;
-  border-radius: 240px;
+  margin: 0 90px;
+  border-radius: 50%;
+  background-color: #000;
 }
 
 .about__logo-image {
@@ -322,9 +316,9 @@ div.bet-button a {
   grid-row: 1;
   align-items: center;
   color: #000;
+  font-weight: 700;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -334,10 +328,14 @@ div.bet-button a {
   grid-column: 2;
   grid-row: 2;  
   color: #000;
+  font-weight: 400;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+}
+
+.about__text p:first-child {
+  margin-bottom: 25px; 
 }
 
 /* Подвал */
@@ -346,11 +344,23 @@ div.bet-button a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  padding-top: 180px;
+  max-width: 1340px;
   margin: 0 auto;
-  width: 1340px;
+  padding-top: 180px;
   padding-bottom: 90px;
 }
+
+.footer__link {
+  border-bottom: 1px solid black;
+  line-height: 24.3px;
+  text-decoration: none;
+}
+
+.footer__address {
+  width: 100%;
+  max-width: 240px;
+  line-height: 24.3px;
+  }
 
 .footer__menu {
   display: grid;
@@ -358,13 +368,13 @@ div.bet-button a {
 }
 
 .footer__menu-list {
-  list-style: none;
-  text-align: center;
   color: #000;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+  text-align: center;
+  list-style: none;
 }
 
 .footer__menu-list-item {
@@ -380,9 +390,13 @@ div.bet-button a {
 }
 
 .footer__social-list-item {
-  width: 48px;
-  height: 48px;
+  max-width: 48px;
+  max-height: 48px;
   margin-left: 45px;
+}
+
+.footer__social-list a:first-child img {
+  margin-left: 0;
 }
 
 .footer__social-link {
