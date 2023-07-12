@@ -196,6 +196,7 @@
 .lots__card-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 27px;
   gap: 25px;
 }
 
@@ -217,21 +218,19 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  background-size: cover;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
 }
 
 .card__title {
@@ -330,8 +329,12 @@
   line-height: normal;
 }
 
+.about__text p {
+  margin-top: 25px; 
+}
+
 .about__text p:first-child {
-  margin-bottom: 25px; 
+  margin-top: 0; 
 }
 
 /* Подвал */
